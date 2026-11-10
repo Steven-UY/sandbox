@@ -1,15 +1,10 @@
-const xhttpr = new XMLHttpRequest();
+#include <stdio.h>
 
-xhttpr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
+void printInput(char name[]){
+    printf("Hello %s\n", name);
+}
 
-xhttpr.send();
-
-xhttpr.onload = ()=> {
-    if (xhttpr.status === 200){
-        const response = JSON.parse(xhttpr.response);
-        console.log(response.title);
-    }
-    else{
-        console.log("Failed!");
-    }
+int main(){
+    printInput("Holarrr");
+    return 0; 
 }
